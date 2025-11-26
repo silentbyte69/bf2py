@@ -9,11 +9,22 @@ Bython is a powerful Python library that converts Brainfuck code to Python and e
 # Features
 
 · 🚀 Direct Execution: Run Brainfuck code directly in Python
+
+
 · 📝 Code Conversion: Convert Brainfuck code to human-readable Python
+
+
 · 🔧 Flexible Configuration: Customizable memory size and input handling
+
+
 · 🛡️ Error Handling: Comprehensive syntax validation and runtime error reporting
+
+
 · 💻 CLI Support: Command-line interface for easy file execution
+
+
 · 📦 Lightweight: No dependencies, pure Python implementation
+
 
 Installation
 
