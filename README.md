@@ -1,9 +1,5 @@
 # Bython
 
-[https://img.shields.io/pypi/v/bython.svg]
-[https://img.shields.io/pypi/pyversions/bython.svg]
-[https://img.shields.io/badge/License-MIT-yellow.svg]
-
 Bython is a powerful Python library that converts Brainfuck code to Python and executes it seamlessly. Whether you want to run Brainfuck programs in Python, convert them to readable Python code, or integrate Brainfuck execution into your projects, Bython makes it simple and efficient.
 
 # Features
