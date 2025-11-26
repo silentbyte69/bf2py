@@ -26,7 +26,7 @@ Bython is a powerful Python library that converts Brainfuck code to Python and e
 · 📦 Lightweight: No dependencies, pure Python implementation
 
 
-Installation
+# Installation
 
 ```bash
 pip install bython
