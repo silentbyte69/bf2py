@@ -32,7 +32,7 @@ Bython is a powerful Python library that converts Brainfuck code to Python and e
 pip install bython
 ```
 
-Quick Start
+# Quick Start
 
 Basic Usage
 
