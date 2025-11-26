@@ -1,11 +1,6 @@
 # This workflow will upload a Python Package to PyPI when a release is created
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
 
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 name: Upload Python Package
 
 on:
@@ -41,24 +36,10 @@ jobs:
         
     - name: Run tests
       run: |
-        python -c "
-import bython
-
-# Test basic functionality
-result = bython.execute('+.', '')
-assert result == chr(1), f'Expected chr(1), got {repr(result)}'
-
-# Test input/output
-result = bython.execute(',.', 'A')
-assert result == 'A', f'Expected A, got {repr(result)}'
-
-# Test compilation
-python_code = bython.compile_to_python('+++.')
-assert 'def bython_program()' in python_code
-assert 'memory[pointer]' in python_code
-
-print('All tests passed!')
-        "
+        python -c "import bython; result = bython.execute('+.', ''); assert result == chr(1), f'Expected chr(1), got {repr(result)}'"
+        python -c "import bython; result = bython.execute(',.', 'A'); assert result == 'A', f'Expected A, got {repr(result)}'"
+        python -c "import bython; python_code = bython.compile_to_python('+++.'); assert 'def bython_program()' in python_code; assert 'memory[pointer]' in python_code"
+        echo "All tests passed!"
 
   release-build:
     runs-on: ubuntu-latest
@@ -73,7 +54,6 @@ print('All tests passed!')
 
       - name: Build release distributions
         run: |
-          # NOTE: put your own distribution build steps here.
           python -m pip install build
           python -m build
 
@@ -92,15 +72,9 @@ print('All tests passed!')
       id-token: write
 
     # Dedicated environments with protections for publishing are strongly recommended.
-    # For more information, see: https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#deployment-protection-rules
     environment:
       name: pypi
-      # OPTIONAL: uncomment and update to include your PyPI project URL in the deployment status:
       url: https://pypi.org/project/bython/
-      #
-      # ALTERNATIVE: if your GitHub Release name is the PyPI project version string
-      # ALTERNATIVE: exactly, uncomment the following line instead:
-      # url: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}
 
     steps:
       - name: Retrieve release distributions
