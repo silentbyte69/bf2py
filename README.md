@@ -1,8 +1,8 @@
 # Bython
 
-https://img.shields.io/pypi/v/bython.svg
-https://img.shields.io/pypi/pyversions/bython.svg
-https://img.shields.io/badge/License-MIT-yellow.svg
+[https://img.shields.io/pypi/v/bython.svg]
+[https://img.shields.io/pypi/pyversions/bython.svg]
+[https://img.shields.io/badge/License-MIT-yellow.svg]
 
 Bython is a powerful Python library that converts Brainfuck code to Python and executes it seamlessly. Whether you want to run Brainfuck programs in Python, convert them to readable Python code, or integrate Brainfuck execution into your projects, Bython makes it simple and efficient.
 
@@ -86,7 +86,7 @@ bython -i "input data" program.bf
 bython -m 50000 program.bf
 ```
 
-API Reference
+# API Reference
 
 Functions
 
@@ -123,13 +123,18 @@ Parameters:
 
 · memory_size (int): Size of the memory tape
 
-Methods
+# Methods
 
 · compile(brainfuck_code): Convert Brainfuck to Python code
+
+
 · execute(brainfuck_code, input_data=""): Execute via Python code generation
+
+
 · execute_direct(brainfuck_code, input_data=""): Direct execution (more efficient)
 
-Examples
+
+# Examples
 
 Hello World
 
@@ -189,7 +194,7 @@ result = bython.execute(rot13_bf, input_text)
 print(f"ROT13 of '{input_text}': {result}")  # uryyb
 ```
 
-Error Handling
+# Error Handling
 
 Bython provides detailed error information:
 
@@ -209,7 +214,7 @@ except BythonRuntimeError as e:
     print(f"Runtime error: {e}")
 ```
 
-Brainfuck Language Reference
+# Brainfuck Language Reference
 
 Bython supports the complete Brainfuck language:
 
@@ -223,7 +228,7 @@ Command Description
 [ Start loop while current cell != 0
 ] End loop
 
-Contributing
+# Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -233,11 +238,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (git push origin feature/amazing-feature)
 5. Open a Pull Request
 
-License
+# License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
+# Acknowledgments
 
 · Brainfuck language designed by Urban Müller
 · Inspired by various Brainfuck implementations in different languages
