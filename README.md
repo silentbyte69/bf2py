@@ -10,6 +10,15 @@ bf2py is a powerful Python library that converts Brainfuck code to Python and ex
 pip install bf2py
 ```
 
+or
+
+```bash
+pip install git+https://github.com/silentbyte69/bf2py
+```
+
+but make sure that you have git installed.
+
+
 # Quick Start
 
 ```python
